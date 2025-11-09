@@ -314,7 +314,7 @@ h5 {
     background-color: var(--red-66);
 
     .stats-content {
-        padding: clamp(2rem, 0rem + 8.8889vw, 6rem) 1rem;
+        padding: clamp(2rem, 8.8889vw, 6rem) 2rem;
         width: 100%;
 
         display: flex;
@@ -1141,6 +1141,20 @@ footer {
         .hero-content {
             h1 {
                 font-size: clamp(1.375rem, -0.1375rem + 6.7222vw, 4rem);
+            }
+        }
+    }
+
+    .stats {
+        .stats-content {
+            gap: clamp(1.5rem, -0.25rem + 7.7778vw, 3.5rem);
+
+            .stat {
+                font-size: clamp(1.1rem, 0.775rem + 1.4444vw, 1.4rem);
+
+                .icon {
+                    width: clamp(1.25rem, 0.625rem + 2.7778vw, 2.2rem);
+                }
             }
         }
     }
