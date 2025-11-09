@@ -11,6 +11,7 @@
     --font-default: "Verdana", sans-serif;
     --btn-size: clamp(.6rem, 1vw + .5rem, .9rem) clamp(1.2rem, 3vw, 2.2rem);
     --btn-sm-size: clamp(.4rem, 0.8vw, .8rem) clamp(.8rem, 2vw, 1rem);
+    --page-margin: clamp(2rem, 0rem + 8.8889vw, 6rem);
 
 }
 
@@ -139,7 +140,7 @@ h5 {
     display: flex;
     align-items: center;
     gap: clamp(1.5rem, 0.25rem + 5.5556vw, 4rem);
-    margin: clamp(2rem, 0rem + 8.8889vw, 6rem) 0;
+    margin: var(--page-margin) 0;
 
     .line {
         flex: 1;
@@ -192,14 +193,20 @@ h5 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 clamp(2rem, 0rem + 8.8889vw, 6rem);
+        gap: 5rem;
+        margin: 0 var(--page-margin);
+        padding-top: 1rem;
 
         .name-logo {
             flex: 1;
@@ -227,7 +234,7 @@ h5 {
                     a {
                         text-decoration: none;
                         text-transform: capitalize;
-                        font-size: 1.5rem;
+                        font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
                         color: var(--white);
 
                         &:hover {
@@ -240,13 +247,11 @@ h5 {
     }
 
     .hero-content {
-        height: 75%;
-        /* altura definida segun los 100vh del padre, para que el contenedor tenga espacio libre para el flex-end */
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
         align-items: center;
         gap: 1rem;
+        padding-bottom: var(--page-margin);
 
         .listen-media-container {
             background-image: url("assets/img/listen-shape.png");
@@ -292,7 +297,8 @@ h5 {
 
         p {
             font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
-            width: 75%;
+            width: 90%;
+            max-width: 750px;
             text-align: center;
         }
 
@@ -335,7 +341,7 @@ h5 {
     padding-bottom: 15rem;
 
     .biography-content {
-        margin: 0 clamp(2rem, 0rem + 8.8889vw, 6rem);
+        margin: 0 var(--page-margin);
 
         .photo-text {
             display: flex;
@@ -344,13 +350,13 @@ h5 {
 
             p {
                 margin-top: 4rem;
-                font-size: 1.6rem;
+                font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
             }
 
             .text {
                 display: flex;
                 flex-direction: column;
-                gap: .8rem;
+                gap: clamp(0.4rem, 1vw, 0.8rem);
 
                 .quote {
                     background-image: url("assets/img/quote-shape.png");
@@ -359,11 +365,11 @@ h5 {
                     background-size: contain;
 
                     margin-top: 4rem;
-                    margin-left: -6rem;
+                    margin-left: calc(var(--page-margin) * -1);
 
                     font-style: italic;
-                    font-size: 1.6rem;
-                    padding: 2rem 6rem;
+                    font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
+                    padding: clamp(1rem, 3vw, 2rem) clamp(3rem, 8vw, 6rem);
                     color: var(--white-85);
                 }
 
@@ -374,12 +380,12 @@ h5 {
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                padding-right: 9rem;
-                gap: .8rem;
+                padding-right: clamp(1.5rem, 6vw, 9rem);
+                gap: clamp(0.4rem, 1vw, 0.8rem);
 
                 img {
-                    width: 40px;
-                    height: 40px;
+                    width: clamp(25px, 3vw, 35px);
+                    height: auto;
                     cursor: pointer;
                 }
             }
@@ -397,16 +403,16 @@ h5 {
         }
 
         .album-text {
-            margin-top: 6rem;
+            margin-top: var(--page-margin);
 
             .line {
                 display: flex;
                 align-items: center;
-                flex: 1;
 
                 background-color: var(--red-66);
 
-                margin: auto -6rem;
+                margin-left: calc(var(--page-margin) * -1);
+                margin-right: calc(var(--page-margin) * -1);
 
                 .album-info {
                     padding: 2rem;
@@ -416,7 +422,7 @@ h5 {
                     }
 
                     p {
-                        font-size: 1.6rem;
+                        font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
                     }
                 }
 
@@ -428,25 +434,25 @@ h5 {
 
                 .left-align {
                     text-align: left;
-                    padding-right: 6rem;
+                    padding-right: var(--page-margin);
                 }
 
                 .right-align {
                     text-align: right;
-                    padding-left: 6rem;
+                    padding-left: var(--page-margin);
                 }
             }
 
             .radius-right {
                 border-radius: 0 clamp(4rem, 15vw, 20vw) clamp(4rem, 15vw, 20vw) 0;
-                margin-right: 6rem;
-                padding-left: 6rem;
+                margin-right: var(--page-margin);
+                padding-left: var(--page-margin);
             }
 
             .radius-left {
                 border-radius: clamp(4rem, 15vw, 20vw) 0 0 clamp(4rem, 15vw, 20vw);
-                margin-left: 6rem;
-                padding-right: 6rem;
+                margin-left: var(--page-margin);
+                padding-right: var(--page-margin);
             }
         }
     }
@@ -465,7 +471,7 @@ h5 {
 
     .discography-content {
         position: relative;
-        margin: 0 clamp(1.5rem, 5vw, 6rem);
+        margin: 0 var(--page-margin);
         z-index: 10;
 
         h3 {
@@ -481,7 +487,7 @@ h5 {
         .listen-media-container {
             position: absolute;
             top: 18%;
-            right: -6rem;
+            right: calc(var(--page-margin) * -1);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -509,7 +515,7 @@ h5 {
 
                     .icon {
                         width: 45px;
-                        height: 45px;
+                        height: auto;
                         cursor: pointer;
                     }
                 }
@@ -532,7 +538,7 @@ h5 {
 
                 span {
                     color: var(--white-85);
-                    font-size: 1.8rem;
+                    font-size: clamp(1.2rem, 0.9rem + 1.3333vw, 1.8rem);
                 }
 
                 iframe {
@@ -589,7 +595,7 @@ h5 {
 
         .tour-content {
             position: relative;
-            margin: 0 clamp(1.5rem, 5vw, 6rem);
+            margin: 0 var(--page-margin);
             z-index: 10;
             display: flex;
             flex-direction: column;
@@ -616,15 +622,15 @@ h5 {
                     width: 80px;
 
                     .month {
-                        font-size: 1.1rem;
+                        font-size: clamp(0.8rem, 0.65rem + 0.6667vw, 1.1rem);
                     }
 
                     .day {
-                        font-size: 2.5rem;
+                        font-size: clamp(1.8rem, 1.45rem + 1.5556vw, 2.5rem);
                     }
 
                     .year {
-                        font-size: 0.8rem;
+                        font-size: clamp(0.6rem, 0.5rem + 0.4444vw, 0.8rem);
                     }
                 }
 
@@ -638,11 +644,11 @@ h5 {
                     max-width: 22%;
 
                     .city {
-                        font-size: 1.5rem;
+                        font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
                     }
 
                     .event {
-                        font-size: 1.3rem;
+                        font-size: clamp(0.9rem, 0.7rem + 0.8889vw, 1.3rem);
                         color: var(--white-85);
                     }
                 }
@@ -651,12 +657,12 @@ h5 {
     }
 
     h4 {
-        margin-left: clamp(1.5rem, 5vw, 6rem);
+        margin-left: var(--page-margin);
         margin-top: 4rem;
     }
 
     h5 {
-        margin-left: clamp(1.5rem, 5vw, 6rem);
+        margin-left: var(--page-margin);
         margin-top: 1rem;
         margin-bottom: 4rem;
     }
@@ -683,7 +689,7 @@ h5 {
             gap: 1rem;
 
             .marker {
-                width: clamp(.8rem, 1.5vw, 1.2rem);
+                width: clamp(1rem, 0.9rem + 0.4444vw, 1.2rem);
                 height: auto;
                 cursor: pointer;
             }
@@ -694,7 +700,7 @@ h5 {
                 background: var(--dark-75);
                 padding: 0.4rem 0.8rem;
                 border-radius: 6px;
-                font-size: clamp(0.6rem, 1.5vw, 1rem);
+                font-size: clamp(0.7rem, 0.55rem + 0.6667vw, 1rem);
             }
 
             &:hover .popup {
@@ -737,14 +743,14 @@ h5 {
 
         margin-top: 4rem;
 
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 0.9rem + 0.4444vw, 1.2rem);
         color: var(--white-85);
     }
 }
 
 .contact {
     .contact-content {
-        margin: 0 clamp(1.5rem, 5vw, 6rem);
+        margin: 0 var(--page-margin);
         padding-top: 1rem;
         padding-bottom: 6rem;
 
@@ -880,7 +886,7 @@ h5 {
                 gap: 1rem;
 
                 p {
-                    font-size: 1.6rem;
+                    font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
                 }
 
                 img {
@@ -908,7 +914,7 @@ h5 {
 
         .shop-content {
             position: relative;
-            margin: 0 clamp(1.5rem, 5vw, 6rem);
+            margin: 0 var(--page-margin);
             z-index: 10;
 
             h5 {
@@ -947,11 +953,11 @@ h5 {
                     }
 
                     .article {
-                        font-size: 1.4rem;
+                        font-size: clamp(1rem, 0.8rem + 0.8889vw, 1.4rem);
                     }
 
                     .price {
-                        font-size: 1.2rem;
+                        font-size: clamp(0.8rem, 0.6rem + 0.8889vw, 1.2rem);
                         color: var(--white-85);
                     }
 
@@ -960,7 +966,7 @@ h5 {
                 .btn-secondary {
                     color: var(--white);
                     border: 1px solid var(--white);
-                    font-size: 1.3rem;
+                    font-size: clamp(1.125rem, 1.0375rem + 0.3889vw, 1.3rem);
                     padding: 0.5rem 2rem;
                     margin-top: auto;
 
@@ -979,7 +985,7 @@ h5 {
 footer {
     background-color: var(--dark);
     color: var(--white);
-    margin: 0 clamp(1.5rem, 5vw, 6rem);
+    margin: 0 var(--page-margin);
 
     .footer-content {
         display: flex;
@@ -988,7 +994,7 @@ footer {
         gap: 3rem;
         margin-top: -8rem;
         /* descompensar espacio que se deja arriba al usar alineamiento segun línea de texto */
-        margin-bottom: 6rem;
+        margin-bottom: var(--page-margin);
 
         .logo {
             display: flex;
@@ -1028,7 +1034,7 @@ footer {
                 }
 
                 h6 {
-                    font-size: 1.6rem;
+                    font-size: clamp(1.1rem, 0.85rem + 1.1111vw, 1.6rem);
                     font-weight: bold;
                 }
             }
@@ -1045,11 +1051,11 @@ footer {
                     gap: 0.6rem;
                     color: var(--white);
                     text-decoration: none;
-                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
 
                     img {
-                        height: 26px;
                         width: 26px;
+                        height: auto;
                     }
                 }
             }
@@ -1060,7 +1066,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 0.8rem;
+        font-size: clamp(0.6rem, 0.5rem + 0.4444vw, 0.8rem);
         border-top: 1px solid var(--red);
         padding: 2rem 0;
 
@@ -1080,7 +1086,31 @@ footer {
 
             span {
                 font-family: "Vogue";
-                font-size: 1.2rem;
+                font-size: clamp(0.8rem, 0.6rem + 0.8889vw, 1.2rem);
+            }
+        }
+    }
+}
+
+@media (max-width: 1450px) {
+    :root {
+        --page-margin: clamp(1.5rem, 0rem + 6vw, 4rem);
+    }
+
+    .hero {
+        header {
+            gap: 2.5rem;
+
+            .name-logo {
+                font-size: clamp(1.75rem, -0.625rem + 10.5556vw, 5.5rem);
+            }
+
+            nav ul {
+                gap: clamp(1rem, 1.5vw, 1.5rem);
+
+                li a {
+                    font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.4rem);
+                }
             }
         }
     }
@@ -1193,7 +1223,7 @@ footer {
             align-items: center;
             gap: 1.5rem;
 
-            stat {
+            .stat {
                 font-size: 1.1rem;
                 gap: 0.8rem;
             }
