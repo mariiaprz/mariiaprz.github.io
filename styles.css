@@ -165,9 +165,8 @@ h5 {
 }
 
 .burger {
-    width: 30px;
+    width: 35px;
     height: 20px;
-    margin-bottom: 8px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -184,7 +183,7 @@ h5 {
         display: inline-block;
 
         border: 1px solid var(--white);
-        border-radius: 1px;
+        border-radius: 5px;
     }
 }
 
@@ -251,7 +250,7 @@ h5 {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        padding-bottom: var(--page-margin);
+        padding-bottom: 4rem;
 
         .listen-media-container {
             background-image: url("assets/img/listen-shape.png");
@@ -265,6 +264,7 @@ h5 {
 
             margin-left: auto;
             /* empuja el contenedor al borde derecho, usa todo el espacio disponible a la derecha */
+            margin-bottom: 2rem;
 
             .listen-media {
                 display: flex;
@@ -1092,9 +1092,9 @@ footer {
     }
 }
 
-@media (max-width: 1450px) {
+@media screen and (max-width: 1450px) {
     :root {
-        --page-margin: clamp(1.5rem, 0rem + 6vw, 4rem);
+        --page-margin: clamp(1.5rem, 6vw, 4rem);
     }
 
     .hero {
@@ -1116,7 +1116,37 @@ footer {
     }
 }
 
-/* --- Breakpoint para tablets (Menú hamburguesa) --- */
+@media screen and (max-width: 1220px) {
+    :root {
+        --page-margin: clamp(1.5rem, 6vw, 3rem);
+    }
+
+    .hero {
+        header {
+            gap: 1.5rem;
+
+            nav ul {
+                gap: 1rem;
+
+                li a {
+                    font-size: clamp(0.9rem, 0.7rem + 0.8vw, 1.2rem);
+                }
+            }
+
+            .name-logo {
+                font-size: clamp(1.75rem, -0.625rem + 10.5556vw, 4.5rem);
+            }
+        }
+
+        .hero-content {
+            h1 {
+                font-size: clamp(1.375rem, -0.1375rem + 6.7222vw, 4rem);
+            }
+        }
+    }
+}
+
+
 @media (max-width: 992px) {
 
     .hero header {
@@ -1144,89 +1174,5 @@ footer {
         display: flex;
         margin: 0;
         /* Resetear margen */
-    }
-}
-
-
-/* --- Breakpoint para móviles (Apilamiento de contenido) --- */
-@media screen and (max-width: 768px) {
-    .hero {
-        /* min 100vh para no contenido desbordado */
-        min-height: 100vh;
-        height: auto;
-
-        /* contenido define altura */
-        .hero-content {
-            height: auto;
-            /* Quitar la altura fija del 75% */
-            justify-content: center;
-            /* Centrar verticalmente */
-            padding-top: 8rem;
-            /* Más espacio desde el header (que es más pequeño) */
-            padding-bottom: 4rem;
-            /* Espacio al final */
-            text-align: center;
-
-            p {
-                width: 90%;
-                /* Usar más ancho de pantalla */
-                font-size: 1rem;
-                /* Fijar un tamaño legible en móvil */
-            }
-
-            .hero-btns {
-                flex-direction: column;
-                /* Apilar los botones */
-                gap: 1.5rem;
-                /* Reducir el espacio entre ellos */
-                width: 90%;
-                /* Hacer que los botones se estiren */
-                align-items: center;
-
-                /* Centrar los botones */
-                .btn-primary,
-                .btn-secondary {
-                    width: 100%;
-                    /* Que ocupen todo el ancho del contenedor padre */
-                    text-align: center;
-                    /* Centrar texto del botón */
-                    font-size: 1.125rem;
-                    /* Asegurar buen tamaño de fuente */
-                }
-            }
-
-            .listen-media-container {
-                /* Moverlo a una posición absoluta para que no moleste al flujo */
-                position: absolute;
-                top: 100px;
-                right: 0;
-                width: 80px;
-                /* Un ancho fijo más pequeño */
-                background-size: cover;
-                /* Ajustar el fondo */
-                background-position: center;
-                z-index: 10;
-            }
-
-            .listen-media {
-                padding: 1rem 0.5rem;
-                /* Ajustar padding */
-                gap: 1rem;
-            }
-        }
-    }
-
-    .stats {
-        .stats-content {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-
-            .stat {
-                font-size: 1.1rem;
-                gap: 0.8rem;
-            }
-        }
     }
 }
