@@ -9,8 +9,9 @@
     --white-55: rgba(255, 255, 255, 0.55);
     --font-logo: "Nexa", sans-serif;
     --font-default: "Verdana", sans-serif;
-    --btn-size: .9rem 2.2rem;
-    --btn-sm-size: .8rem 1rem;
+    --btn-size: clamp(.6rem, 1vw + .5rem, .9rem) clamp(1.2rem, 3vw, 2.2rem);
+    --btn-sm-size: clamp(.4rem, 0.8vw, .8rem) clamp(.8rem, 2vw, 1rem);
+
 }
 
 @font-face {
@@ -52,10 +53,10 @@ html {
     background-color: var(--red);
     padding: var(--btn-size);
     color: var(--white);
-    font-size: 1.3rem;
+    font-size: clamp(1.125rem, 1.0375rem + 0.3889vw, 1.3rem);
     text-transform: uppercase;
     border: none;
-    border-radius: 30px;
+    border-radius: 2rem;
     cursor: pointer;
 
     a {
@@ -72,9 +73,9 @@ html {
     background-color: transparent;
     padding: var(--btn-size);
     color: var(--red);
-    font-size: 1.3rem;
+    font-size: clamp(1.125rem, 1.0375rem + 0.3889vw, 1.3rem);
     text-transform: uppercase;
-    border-radius: 30px;
+    border-radius: 2rem;
     border: 2px solid var(--red);
     cursor: pointer;
 
@@ -112,24 +113,24 @@ html {
     }
 
     h2 {
-        font-size: clamp(1.5rem, 5vw + 1rem, 2.8rem);
+        font-size: clamp(1.125rem, 0.2875rem + 3.7222vw, 2.8rem);
         font-family: var(--font-default);
         font-weight: bold;
     }
 }
 
 h3 {
-    font-size: 2.1rem;
+    font-size: clamp(1.25rem, 0.825rem + 1.8889vw, 2.1rem);
     font-weight: bold;
 }
 
 h4 {
-    font-size: 1.8rem;
+    font-size: clamp(1.125rem, 0.7875rem + 1.5vw, 1.8rem);
     font-weight: bold;
 }
 
 h5 {
-    font-size: 1.5rem;
+    font-size: clamp(1.125rem, 0.9375rem + 0.8333vw, 1.5rem);
     font-weight: normal;
     color: var(--white-55);
 }
@@ -137,8 +138,8 @@ h5 {
 .dividing-line {
     display: flex;
     align-items: center;
-    gap: 4rem;
-    margin: 6rem 0;
+    gap: clamp(1.5rem, 0.25rem + 5.5556vw, 4rem);
+    margin: clamp(2rem, 0rem + 8.8889vw, 6rem) 0;
 
     .line {
         flex: 1;
@@ -147,8 +148,8 @@ h5 {
     }
 
     .icon {
-        width: 90px;
-        height: 90px;
+        width: clamp(3.125rem, 1.875rem + 5.5556vw, 5.625rem);
+        height: auto;
     }
 }
 
@@ -160,6 +161,30 @@ h5 {
     left: 0;
     background: var(--dark-75);
     z-index: 1;
+}
+
+.burger {
+    width: 30px;
+    height: 20px;
+    margin-bottom: 8px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+
+    span {
+        width: 100%;
+        height: 1px;
+
+        display: inline-block;
+
+        border: 1px solid var(--white);
+        border-radius: 1px;
+    }
 }
 
 .hero {
@@ -174,13 +199,13 @@ h5 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 clamp(1rem, 5vw, 6rem);
+        margin: 0 clamp(2rem, 0rem + 8.8889vw, 6rem);
 
         .name-logo {
             flex: 1;
             font-family: var(--font-logo);
             text-transform: uppercase;
-            font-size: 6.5rem;
+            font-size: clamp(1.75rem, -0.625rem + 10.5556vw, 6.5rem);
             color: var(--red);
         }
 
@@ -194,7 +219,7 @@ h5 {
                 justify-content: flex-end;
                 align-items: center;
 
-                gap: 2rem;
+                gap: clamp(1rem, 2vw, 2rem);
 
                 li {
                     cursor: pointer;
@@ -248,8 +273,8 @@ h5 {
                     display: inline-block;
 
                     .icon {
-                        width: 35px;
-                        height: 35px;
+                        width: clamp(25px, 3vw, 35px);
+                        height: auto;
                         cursor: pointer;
                     }
                 }
@@ -260,13 +285,14 @@ h5 {
             font-family: "Engravers-MT";
             text-transform: uppercase;
             color: var(--white-55);
-            font-size: 4.4rem;
+            font-size: clamp(1.375rem, -0.1375rem + 6.7222vw, 4.4rem);
             font-weight: 100;
+            text-align: center;
         }
 
         p {
-            font-size: 1.5rem;
-            width: 45%;
+            font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
+            width: 75%;
             text-align: center;
         }
 
@@ -282,24 +308,24 @@ h5 {
     background-color: var(--red-66);
 
     .stats-content {
-
-        height: 196px;
+        padding: clamp(2rem, 0rem + 8.8889vw, 6rem) 1rem;
         width: 100%;
 
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 5rem;
+        gap: clamp(1.5rem, -0.25rem + 7.7778vw, 5rem);
 
         .stat {
             display: flex;
             align-items: center;
             gap: 1rem;
-            font-size: 1.75rem;
+            font-size: clamp(1.1rem, 0.775rem + 1.4444vw, 1.75rem);
 
             .icon {
-                width: 40px;
-                height: 40px;
+                width: clamp(1.25rem, 0.625rem + 2.7778vw, 2.5rem);
+                height: auto;
             }
         }
     }
@@ -309,7 +335,7 @@ h5 {
     padding-bottom: 15rem;
 
     .biography-content {
-        margin: 0 clamp(1.5rem, 5vw, 6rem);
+        margin: 0 clamp(2rem, 0rem + 8.8889vw, 6rem);
 
         .photo-text {
             display: flex;
@@ -424,8 +450,8 @@ h5 {
             }
         }
     }
-
 }
+
 
 
 
@@ -1057,5 +1083,99 @@ footer {
                 font-size: 1.2rem;
             }
         }
+    }
+}
+
+/* --- Breakpoint para tablets (Menú hamburguesa) --- */
+@media (max-width: 992px) {
+
+    .hero header {
+        /* Reducir el margen en pantallas más pequeñas */
+         margin: 0 clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .hero header nav {
+        /* El nav debe alinearse a la derecha y no ocupar el 50% */
+        flex-grow: 0; /* No crecer */
+        flex-shrink: 1; /* Encoger si es necesario */
+        flex-basis: auto; /* Base automática */
+    }
+
+    .menu-off {
+         /* Ocultar los enlaces del menú en desktop */
+         display: none;
+    }
+
+    .burger {
+         /* Mostrar el ícono de hamburguesa */
+        display: flex; 
+        margin: 0; /* Resetear margen */
+    }
+}
+
+
+/* --- Breakpoint para móviles (Apilamiento de contenido) --- */
+@media (max-width: 768px) {
+    .hero {
+        /* En móviles, 100vh puede ser problemático si el contenido
+           se desborda. min-height es más seguro. */
+        min-height: 100vh; 
+        height: auto; /* Dejar que el contenido defina la altura */
+    }
+
+    .hero .hero-content {
+         height: auto; /* Quitar la altura fija del 75% */
+        justify-content: center; /* Centrar verticalmente */
+        padding-top: 8rem; /* Más espacio desde el header (que es más pequeño) */
+        padding-bottom: 4rem; /* Espacio al final */
+        text-align: center;
+    }
+
+    .hero .hero-content p {
+        width: 90%; /* Usar más ancho de pantalla */
+        font-size: 1rem; /* Fijar un tamaño legible en móvil */
+    }
+
+    .hero .hero-content .hero-btns {
+         flex-direction: column; /* Apilar los botones */
+         gap: 1.5rem; /* Reducir el espacio entre ellos */
+        width: 90%; /* Hacer que los botones se estiren */
+        align-items: center; /* Centrar los botones */
+    }
+
+    .hero .hero-content .hero-btns .btn-primary,
+    .hero .hero-content .hero-btns .btn-secondary {
+        width: 100%; /* Que ocupen todo el ancho del contenedor padre */
+        text-align: center; /* Centrar texto del botón */
+        font-size: 1.125rem; /* Asegurar buen tamaño de fuente */
+    }
+
+     .hero .hero-content .listen-media-container {
+        /* Moverlo a una posición absoluta para que no moleste al flujo */
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 80px; /* Un ancho fijo más pequeño */
+        background-size: cover; /* Ajustar el fondo */
+        background-position: center;
+        z-index: 10;
+    }
+
+    .hero .hero-content .listen-media {
+        padding: 1rem 0.5rem; /* Ajustar padding */
+        gap: 1rem;
+    }
+
+    /* --- Sección de Estadísticas --- */
+    .stats .stats-content {
+         flex-direction: column; /* Apilar las estadísticas */
+        align-items: flex-start; /* Alinear a la izquierda para mejor lectura */
+        padding: clamp(2rem, 10vw, 4rem) 2rem; /* Ajustar padding */
+         gap: 1.5rem; /* Espacio entre stats apiladas */
+    }
+
+    .stats .stats-content .stat {
+        font-size: 1.1rem; /* Ajustar tamaño en móvil */
+        gap: 0.8rem;
     }
 }
