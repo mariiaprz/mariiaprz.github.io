@@ -187,6 +187,7 @@ h5 {
     }
 }
 
+/* hero section */
 .hero {
     background-image: url("assets/img/hero-background.png");
     background-repeat: no-repeat;
@@ -250,7 +251,7 @@ h5 {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        padding-bottom: 4rem;
+        padding-bottom: clamp(2.5rem, 5vh, 4rem);
 
         .listen-media-container {
             background-image: url("assets/img/listen-shape.png");
@@ -310,6 +311,7 @@ h5 {
     }
 }
 
+/* stats section */
 .stats {
     background-color: var(--red-66);
 
@@ -337,8 +339,9 @@ h5 {
     }
 }
 
+/* bio section */
 .biography {
-    padding-bottom: 15rem;
+    padding-bottom: clamp(6rem, 12vw, 15rem);
 
     .biography-content {
         margin: 0 var(--page-margin);
@@ -359,13 +362,13 @@ h5 {
                 gap: clamp(0.4rem, 1vw, 0.8rem);
 
                 .quote {
-                    background-image: url("assets/img/quote-shape.png");
-                    background-repeat: no-repeat;
-                    background-position: left;
-                    background-size: contain;
+                    background-color: var(--red-66);
+                    border-radius: 0 clamp(4rem, 15vw, 20vw) clamp(4rem, 15vw, 20vw) 0;
 
                     margin-top: 4rem;
                     margin-left: calc(var(--page-margin) * -1);
+                    margin-right: auto;
+                    /* para que no se estire a todo lo ancho */
 
                     font-style: italic;
                     font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
@@ -374,7 +377,6 @@ h5 {
                 }
 
             }
-
 
             .social-media {
                 display: flex;
@@ -458,9 +460,7 @@ h5 {
     }
 }
 
-
-
-
+/* discography section */
 .discography {
     position: relative;
     background-image: url(assets/img/discography-background.png);
@@ -582,6 +582,7 @@ h5 {
     }
 }
 
+/* tour section */
 .tour {
     position: relative;
 
@@ -748,6 +749,7 @@ h5 {
     }
 }
 
+/* contact section */
 .contact {
     .contact-content {
         margin: 0 var(--page-margin);
@@ -981,7 +983,7 @@ h5 {
     }
 }
 
-
+/* footer section */
 footer {
     background-color: var(--dark);
     color: var(--white);
@@ -1114,6 +1116,33 @@ footer {
             }
         }
     }
+
+    .biography {
+        .biography-content {
+
+            .photo-text {
+                gap: 1.5rem;
+
+                p {
+                   font-size: clamp(1rem, -0.5913rem + 2.087vw, 1.3rem);
+                }
+
+                .text {
+                    max-width: 50%;
+
+                    .quote {
+                        font-size: clamp(1rem, -0.5913rem + 2.087vw, 1.3rem);
+                        padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 5vw, 3rem);
+                        border-radius: 0 clamp(1.5rem, 6vw, 8rem) clamp(1.5rem, 6vw, 8rem) 0;
+                    }
+                }
+
+                .jud {
+                    max-width: 45%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1220px) {
@@ -1158,35 +1187,50 @@ footer {
             }
         }
     }
-}
 
+    .biography {
+        .biography-content {
+
+            .photo-text {
+                flex-direction: row;
+                gap: 1.8rem;
+
+                .text {
+                    max-width: 55%;
+                }
+
+                p {
+                    font-size: clamp(0.8rem, 0.45rem + 0.8vw, 1.1rem);
+                }
+
+                .quote {
+                    font-size: clamp(0.85rem, 0.5rem + 0.7vw, 1.1rem);
+                    margin: 2rem 0;
+                    padding: clamp(1rem, 2.5vw, 1.5rem) clamp(1.5rem, 4vw, 3rem);
+                    border-radius: clamp(1.5rem, 5vw, 6rem);
+                }
+
+                .jud {
+                    max-width: 45%;
+                    min-width: 260px;
+                }
+            }
+
+        }
+    }
+}
 
 @media (max-width: 992px) {
 
     .hero header {
-        /* Reducir el margen en pantallas más pequeñas */
         margin: 0 clamp(1.5rem, 5vw, 2rem);
     }
 
-    .hero header nav {
-        /* El nav debe alinearse a la derecha y no ocupar el 50% */
-        flex-grow: 0;
-        /* No crecer */
-        flex-shrink: 1;
-        /* Encoger si es necesario */
-        flex-basis: auto;
-        /* Base automática */
-    }
-
     .menu-off {
-        /* Ocultar los enlaces del menú en desktop */
         display: none;
     }
 
     .burger {
-        /* Mostrar el ícono de hamburguesa */
         display: flex;
-        margin: 0;
-        /* Resetear margen */
     }
 }
