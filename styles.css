@@ -1649,8 +1649,6 @@ footer {
     }
 
     .discography {
-        padding-bottom: 7rem;
-
         .discography-content {
             h3 {
                 margin-top: 3rem;
@@ -1815,13 +1813,10 @@ footer {
 
     footer {
         .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 0;
             margin-top: -1rem;
             padding-bottom: 1rem;
+            align-items: center;
+            gap: 0;
 
             .media-footer {
                 display: flex;
@@ -1855,4 +1850,427 @@ footer {
     }
 }
 
-@media screen and (max-width:660px) {}
+@media screen and (max-width: 660px) {
+    :root {
+        --page-margin: clamp(1rem, 4vw, 1.8rem);
+        --btn-size: .8rem 1.2rem;
+        --btn-sm-size: .7rem 0.8rem;
+    }
+
+    .title {
+        padding-top: clamp(2.5rem, 8vw, 5rem);
+
+        .line-vertical {
+            height: clamp(35px, 8vw, 50px);
+        }
+
+        h2 {
+            font-size: clamp(1.4rem, 1rem + 2.2727vw, 2rem);
+        }
+    }
+
+    h3 {
+        font-size: clamp(1.1rem, 0.8167rem + 1.3131vw, 1.4rem);
+    }
+
+    h4 {
+        font-size: clamp(1rem, 0.7667rem + 1.0606vw, 1.3rem);
+    }
+
+    h5 {
+        font-size: clamp(0.8rem, 0.6667rem + 0.8333vw, 1.1rem);
+    }
+
+    .btn-primary {
+        font-size: clamp(0.9rem, 0.7667rem + 0.6061vw, 1.15rem);
+    }
+
+    .btn-secondary {
+        font-size: clamp(0.9rem, 0.7667rem + 0.6061vw, 1.15rem);
+    }
+
+    .btn-sm {
+        font-size: clamp(0.8rem, 0.6667rem + 0.6061vw, 0.95rem);
+    }
+
+    .hero {
+        .hero-content {
+            h1 {
+                font-size: clamp(1.7rem, 0.5rem + 3.5vw, 3rem);
+            }
+
+            p {
+                font-size: clamp(0.9rem, 0.85rem + 0.5vw, 1.1rem);
+            }
+
+            .hero-btns {
+                padding: 0;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                max-width: 300px;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .stats {
+        .stats-content {
+            gap: clamp(1rem, 5vw, 2rem);
+
+            .stat {
+                font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem);
+
+                .icon {
+                    width: clamp(1rem, 2vw, 1.5rem);
+                }
+            }
+        }
+    }
+
+    .biography {
+        padding-bottom: clamp(3rem, 8vw, 6rem);
+
+        .biography-content {
+            .photo-text {
+                gap: 1.5rem;
+
+                p {
+                    font-size: clamp(0.9rem, 0.85rem + 0.5vw, 1.1rem);
+                    margin-top: 1.5rem;
+                }
+
+                .text {
+                    .quote {
+                        font-size: clamp(0.9rem, 0.85rem + 0.5vw, 1.1rem);
+                        padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.2rem, 4vw, 2rem);
+                        margin-top: 1.5rem;
+                        border-radius: 0 5rem 5rem 0;
+                    }
+
+                    .social-media {
+                        margin-top: 1rem;
+
+                        img {
+                            width: 26px;
+                        }
+                    }
+                }
+
+                .jud {
+                    max-width: 80%;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            .album-text {
+                margin-top: 3rem;
+
+                .line {
+                    max-width: 90%;
+
+                    img {
+                        max-width: 200px;
+                    }
+
+                    .album-info {
+                        padding: 1.5rem;
+
+                        p {
+                            font-size: clamp(0.9rem, 0.85rem + 0.5vw, 1.1rem);
+                        }
+
+                        h4 {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+
+                .line.radius-right {
+                    border-radius: 0 8rem 8rem 0;
+                }
+
+                .line.radius-left {
+                    border-radius: 8rem 0 0 8rem;
+                }
+            }
+        }
+    }
+
+    .discography {
+        .discography-content {
+            .listen-media-container {
+                top: 490px;
+
+                .listen-media {
+                    gap: 1rem;
+                    padding: 1rem .6rem;
+
+                    a {
+                        .icon {
+                            width: 25px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .tour {
+        .tour-background {
+            padding-bottom: 3rem;
+
+            .tour-content {
+                gap: 1.8rem;
+
+                h3 {
+                    margin-top: 1rem;
+                    margin-bottom: 1.2rem;
+                    padding-left: 0.8rem;
+                }
+
+                .concert {
+                    padding-left: 0.8rem;
+                    gap: 1rem;
+
+                    .date {
+                        width: 70px;
+
+                        .month {
+                            font-size: clamp(0.7rem, 0.6rem + 0.5vw, 0.9rem);
+                        }
+
+                        .day {
+                            font-size: clamp(1.6rem, 1.4rem + 1vw, 2rem);
+                        }
+
+                        .year {
+                            font-size: clamp(0.5rem, 0.45rem + 0.25vw, 0.65rem);
+                        }
+                    }
+
+                    .place {
+                        max-width: 50%;
+
+                        .city {
+                            font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+                        }
+
+                        .event {
+                            font-size: clamp(0.8rem, 0.7rem + 0.5vw, 0.95rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        h4 {
+            margin-top: 2rem;
+        }
+
+        h5 {
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .map-container {
+            width: 85%;
+
+            .marker-interaction {
+                .marker {
+                    width: clamp(0.75rem, 0.65rem + 0.5vw, 0.9rem);
+                }
+
+                .popup {
+                    font-size: clamp(0.55rem, 0.5rem + 0.25vw, 0.75rem);
+                    padding: 0.25rem 0.5rem;
+                }
+            }
+        }
+
+        .map-cta {
+            margin: 2rem var(--page-margin) 0;
+            gap: 1rem;
+            font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.05rem);
+        }
+    }
+
+    .contact {
+        .contact-content {
+            padding-bottom: 4rem;
+
+            .form-text {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+
+                .contact-form {
+                    margin-top: 2rem;
+                    width: 100%;
+
+                    form {
+                        gap: 1.3rem;
+
+                        input[type="text"],
+                        input[type="email"],
+                        select,
+                        textarea {
+                            padding: 9px;
+                        }
+
+                        textarea {
+                            height: 110px;
+                        }
+                    }
+
+                    .purpose {
+                        label {
+                            font-size: 0.95rem;
+                        }
+                    }
+
+                    .form-footer {
+                        gap: 1rem;
+
+                        .privacy {
+                            input[type="checkbox"] {
+                                width: 16px;
+                                height: 16px;
+                            }
+
+                            .terms {
+                                label {
+                                    font-size: clamp(0.65rem, 0.6rem + 0.25vw, 0.8rem);
+                                }
+
+                                p {
+                                    font-size: 0.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .phrases {
+                    width: 100%;
+                    align-items: center;
+                    gap: 1.5rem;
+                    padding-top: 2rem;
+
+                    .phrase {
+                        gap: 0.6rem;
+
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        p {
+                            font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.1rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        .shop {
+            .shop-content {
+                h3 {
+                    font-size: clamp(1.3rem, 1.1rem + 1vw, 1.6rem);
+                }
+
+                h5 {
+                    margin-top: 0.8rem;
+                }
+
+                .items {
+                    margin-top: 3rem;
+                    gap: 2.5rem;
+
+                    .item {
+                        img {
+                            max-width: 200px;
+                        }
+
+                        .img-sm {
+                            width: 35%;
+                        }
+
+                        .article {
+                            font-size: clamp(0.85rem, 0.75rem + 0.5vw, 1rem);
+                        }
+
+                        .price {
+                            font-size: clamp(0.7rem, 0.65rem + 0.25vw, 0.85rem);
+                        }
+                    }
+
+                    .btn-secondary {
+                        font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.1rem);
+                        padding: 0.4rem 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2rem;
+            padding-top: 2rem;
+
+            .footer-nav {
+                display: none;
+                /* oculta los contenedores vacíos */
+            }
+
+            .logo {
+                .name-logo {
+                    font-size: clamp(2.5rem, 2rem + 2.5vw, 3.5rem);
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .media-footer {
+                justify-content: center;
+                margin-left: 0;
+
+                .media-nav {
+                    gap: 1.2rem;
+
+                    li {
+                        a {
+                            img {
+                                width: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+                                height: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .subfooter {
+            gap: 0.8rem;
+            padding: 1.5rem 0;
+            font-size: clamp(0.45rem, 0.4rem + 0.25vw, 0.65rem);
+
+            p:last-child {
+                span {
+                    font-size: clamp(0.7rem, 0.6rem + 0.5vw, 1rem);
+                }
+            }
+        }
+    }
+}
