@@ -1843,7 +1843,7 @@ footer {
                             align-items: center;
 
                             img {
-                                width: auto;
+                                width: clamp(1.25rem, 0.6522rem + 2.1739vw, 2rem);
                                 height: clamp(1.25rem, 0.6522rem + 2.1739vw, 2rem);
                                 opacity: 0.8;
                             }
