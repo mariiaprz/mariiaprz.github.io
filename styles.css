@@ -187,6 +187,10 @@ h5 {
     }
 }
 
+.media-footer {
+    display: none;
+}
+
 /* hero section */
 .hero {
     background-image: url("assets/img/hero-background.png");
@@ -548,17 +552,25 @@ h5 {
             }
         }
 
+        .albums,
+        .singles {
+            column-gap: 5rem;
+            /* separa en horizontal */
+            row-gap: 1rem;
+            /* separa en vertical */
+        }
+
         .albums {
             padding: 0 1.5rem;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            gap: 5rem;
 
             iframe {
                 flex: 1;
                 height: 470px;
-                width: auto;
+                width: 100%;
             }
         }
 
@@ -567,7 +579,6 @@ h5 {
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 3rem;
             flex-wrap: wrap;
 
             .column {
@@ -575,7 +586,7 @@ h5 {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                min-width: 250px;
+                min-width: 330px;
             }
         }
     }
@@ -881,7 +892,7 @@ h5 {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            gap: 2.5rem;
+            gap: 2rem;
             flex: 1;
 
             .phrase {
@@ -1453,11 +1464,12 @@ footer {
             margin-top: 3rem;
         }
     }
+
     .contact {
 
         .contact-content {
             .form-text {
-                gap: 5rem;   
+                gap: 5rem;
 
                 .contact-form {
                     margin-top: 3rem;
@@ -1479,26 +1491,26 @@ footer {
                         .purpose {
                             gap: 0.4rem;
                         }
+                    }
 
-                        .form-footer {
-                            .privacy {
-                                gap: 0.8rem;
+                    .form-footer {
+                        .privacy {
+                            gap: 0.8rem;
 
-                                input[type="checkbox"] {
-                                    width: 18px;
-                                    height: 18px;
+                            input[type="checkbox"] {
+                                width: 18px;
+                                height: 18px;
+                            }
+
+                            .terms {
+                                gap: 0.4rem;
+
+                                label {
+                                    font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1rem);
                                 }
 
-                                .terms {
-                                    gap: 0.4rem;
-
-                                    label {
-                                        font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1rem);
-                                    }
-
-                                    p {
-                                        font-size: .6rem;
-                                    }
+                                p {
+                                    font-size: .6rem;
                                 }
                             }
                         }
@@ -1530,6 +1542,21 @@ footer {
 @media screen and (max-width: 992px) {
     :root {
         --page-margin: clamp(1rem, 5vw, 2.5rem);
+        --btn-size: .85rem 1.4rem;
+        --btn-sm-size: .75rem 0.9rem;
+
+    }
+
+    .btn-primary {
+        font-size: clamp(1.15rem, 1.1071rem + 0.1558vw, 1.3rem);
+    }
+
+    .btn-secondary {
+        font-size: clamp(1.15rem, 1.1071rem + 0.1558vw, 1.3rem);
+    }
+
+    .btn-sm {
+        font-size: clamp(0.9rem, 0.85vw + 0.5rem, 1rem);
     }
 
     .menu-off {
@@ -1541,9 +1568,9 @@ footer {
     }
 
     .hero {
-        header {
-            .name-logo {
-                font-size: clamp(2rem, 0.4459rem + 6.2162vw, 4.3rem);
+        .hero-content {
+            .hero-btns {
+                gap: 1.5rem;
             }
         }
     }
@@ -1563,6 +1590,8 @@ footer {
     }
 
     .biography {
+        padding-bottom: clamp(4rem, 8vw, 10rem);
+
         .biography-content {
             .photo-text {
                 flex-direction: column;
@@ -1573,12 +1602,18 @@ footer {
 
                     .quote {
                         padding: clamp(0.9rem, 2vw, 1.3rem) clamp(1.6rem, 4vw, 2.5rem);
-                        border-radius: 0 7rem 7rem 0;
+                        font-size: clamp(1.1rem, 0.9804rem + 0.4348vw, 1.25rem);
+                    }
+
+                    .social-media {
+                        img {
+                            width: 28px;
+                        }
                     }
                 }
 
                 .jud {
-                    max-width: 55%;
+                    max-width: 65%;
                 }
             }
 
@@ -1586,21 +1621,237 @@ footer {
                 flex-direction: column-reverse;
             }
 
-            /* ------------------------ ALBUM TEXT ------------------------ */
             .album-text {
                 .line {
-                    max-width: 550px;
 
                     img {
-                        margin: 1rem;
-                        max-width: 240px;
+                        max-width: 230px;
                     }
 
                     .album-info {
-                        max-width: 500px;
+                        max-width: 85%;
+
+                        h4 {
+                            font-size: clamp(1.15rem, 0.9507rem + 0.7246vw, 1.4rem);
+                        }
+                    }
+                }
+
+                .line.radius-right {
+                    border-radius: 0 16rem 16rem 0;
+                }
+
+                .line.radius-left {
+                    border-radius: 16rem 0 0 16rem;
+                }
+            }
+        }
+    }
+
+    .discography {
+        padding-bottom: 7rem;
+
+        .discography-content {
+            h3 {
+                margin-top: 3rem;
+                padding-left: 1rem;
+            }
+
+            .listen-media-container {
+                top: 550px;
+
+                .listen-media {
+                    gap: 1.2rem;
+                    padding: 1.7rem 0.9rem;
+
+                    a {
+                        .icon {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+
+            .tracks {
+                margin-top: 2.5rem;
+                gap: 1.7rem;
+            }
+        }
+    }
+
+    .tour {
+        .tour-background {
+            padding-bottom: 4rem;
+
+            .tour-content {
+                gap: 2.2rem;
+
+                h3 {
+                    margin-top: 1.2rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .concert {
+                    gap: 1.2rem;
+
+                    .date {
+
+                        .month {
+                            font-size: clamp(0.75rem, 0.6rem + 0.55vw, 1rem);
+                        }
+
+                        .day {
+                            font-size: clamp(1.8rem, 1.5rem + 0.9vw, 2.3rem);
+                        }
+
+                        .year {
+                            font-size: clamp(0.55rem, 0.45rem + 0.35vw, 0.75rem);
+                        }
+                    }
+
+                    .place {
+                        max-width: 40%;
+
+                        .city {
+                            font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
+                        }
+
+                        .event {
+                            font-size: clamp(0.85rem, 0.75rem + 0.35vw, 1rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        h4 {
+            margin-top: 2.5rem;
+        }
+
+        h5 {
+            margin-top: 0.6rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .map-container {
+            width: 90%;
+
+            .marker-interaction {
+                .marker {
+                    width: clamp(0.85rem, 0.75rem + 0.35vw, 1rem);
+                }
+
+                .popup {
+                    font-size: clamp(0.6rem, 0.5rem + 0.5vw, 0.85rem);
+                    padding: 0.3rem 0.6rem;
+                }
+            }
+        }
+
+        .map-cta {
+            margin-top: 2.5rem;
+            gap: 1.2rem;
+            font-size: clamp(0.85rem, 0.75rem + 0.35vw, 1rem);
+        }
+    }
+
+    .contact {
+        .contact-content {
+            padding-bottom: 5rem;
+
+            .form-text {
+                gap: 2rem;
+
+                .contact-form {
+                    margin-top: 2.5rem;
+                    width: 100%;
+
+                    form {
+                        gap: 1.5rem;
+
+                        textarea {
+                            height: 120px;
+                        }
+                    }
+
+                    .purpose {
+                        label {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .form-footer {
+                        gap: .6rem;
+
+                        .privacy {
+
+
+                            .terms {
+                                label {
+                                    font-size: clamp(0.7rem, 0.5406rem + 0.5797vw, 0.9rem);
+                                }
+
+                                p {
+                                    font-size: .45rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .phrases {
+                    .phrase {
+                        font-size: 1.1rem;
+
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
                     }
                 }
             }
         }
     }
-}
+
+    footer {
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0;
+            margin-top: -1rem;
+            padding-bottom: 1rem;
+
+            .media-footer {
+                display: flex;
+                justify-content: flex-end;
+                gap: 2rem;
+                align-items: center;
+                margin-left: auto;
+
+                .media-nav {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    gap: 1rem;
+                    list-style: none;
+
+                    li {
+                        a {
+                            display: flex;
+                            align-items: center;
+
+                            img {
+                                width: auto;
+                                height: clamp(1.25rem, 0.6522rem + 2.1739vw, 2rem);
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:660px) {}
