@@ -9,8 +9,8 @@
     --white-55: rgba(255, 255, 255, 0.55);
     --font-logo: "Nexa", sans-serif;
     --font-default: "Verdana", sans-serif;
-    --btn-size: clamp(.6rem, 1vw + .5rem, .9rem) clamp(1.2rem, 3vw, 2.2rem);
-    --btn-sm-size: clamp(.4rem, 0.8vw, .8rem) clamp(.8rem, 2vw, 1rem);
+    --btn-size: .9rem 2.2rem;
+    --btn-sm-size: .8rem 1rem;
     --page-margin: clamp(2rem, 0rem + 8.8889vw, 6rem);
 
 }
@@ -54,7 +54,7 @@ html {
     background-color: var(--red);
     padding: var(--btn-size);
     color: var(--white);
-    font-size: clamp(1.125rem, 1.0375rem + 0.3889vw, 1.3rem);
+    font-size: clamp(1.15rem, 1.1071rem + 0.1558vw, 1.3rem);
     text-transform: uppercase;
     border: none;
     border-radius: 2rem;
@@ -74,7 +74,7 @@ html {
     background-color: transparent;
     padding: var(--btn-size);
     color: var(--red);
-    font-size: clamp(1.125rem, 1.0375rem + 0.3889vw, 1.3rem);
+    font-size: clamp(1.15rem, 1.1071rem + 0.1558vw, 1.3rem);
     text-transform: uppercase;
     border-radius: 2rem;
     border: 2px solid var(--red);
@@ -114,24 +114,24 @@ html {
     }
 
     h2 {
-        font-size: clamp(1.125rem, 0.2875rem + 3.7222vw, 2.8rem);
+        font-size: clamp(2.4rem, 2.2857rem + 0.4156vw, 2.8rem);
         font-family: var(--font-default);
         font-weight: bold;
     }
 }
 
 h3 {
-    font-size: clamp(1.25rem, 0.825rem + 1.8889vw, 2.1rem);
+    font-size: clamp(1.7rem, 1.5857rem + 0.4156vw, 2.1rem);
     font-weight: bold;
 }
 
 h4 {
-    font-size: clamp(1.125rem, 0.7875rem + 1.5vw, 1.8rem);
+    font-size: clamp(1.4rem, 1.2857rem + 0.4156vw, 1.8rem);
     font-weight: bold;
 }
 
 h5 {
-    font-size: clamp(1.125rem, 0.9375rem + 0.8333vw, 1.5rem);
+    font-size: clamp(1.1rem, 0.9857rem + 0.4156vw, 1.5rem);
     font-weight: normal;
     color: var(--white-55);
 }
@@ -537,7 +537,7 @@ h5 {
 
                 span {
                     color: var(--white-85);
-                    font-size: clamp(1.2rem, 0.9rem + 1.3333vw, 1.8rem);
+                    font-size: clamp(1.4rem, 1.2857rem + 0.4156vw, 1.8rem);
                 }
 
                 iframe {
@@ -602,7 +602,7 @@ h5 {
             gap: 3rem;
 
             h3 {
-                margin-top: 4rem;
+                margin-top: 2rem;
                 margin-bottom: 2.5rem;
                 padding-left: 1.5rem;
             }
@@ -622,15 +622,15 @@ h5 {
                     width: 80px;
 
                     .month {
-                        font-size: clamp(0.8rem, 0.65rem + 0.6667vw, 1.1rem);
+                        font-size: 1.1rem;
                     }
 
                     .day {
-                        font-size: clamp(1.8rem, 1.45rem + 1.5556vw, 2.5rem);
+                        font-size: 2.5rem;
                     }
 
                     .year {
-                        font-size: clamp(0.6rem, 0.5rem + 0.4444vw, 0.8rem);
+                        font-size: .8rem;
                     }
                 }
 
@@ -644,11 +644,11 @@ h5 {
                     max-width: 22%;
 
                     .city {
-                        font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
+                        font-size: 1.5rem;
                     }
 
                     .event {
-                        font-size: clamp(0.9rem, 0.7rem + 0.8889vw, 1.3rem);
+                        font-size: 1.3rem;
                         color: var(--white-85);
                     }
                 }
@@ -743,8 +743,9 @@ h5 {
 
         margin-top: 4rem;
 
-        font-size: clamp(1rem, 0.9rem + 0.4444vw, 1.2rem);
+        font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
         color: var(--white-85);
+        text-align: center;
     }
 }
 
@@ -833,6 +834,7 @@ h5 {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    gap: 3rem;
 
                     input[type="checkbox"] {
                         -webkit-appearance: none;
@@ -841,6 +843,7 @@ h5 {
                         height: 23px;
                         border: 1px solid var(--red);
                         cursor: pointer;
+                        flex-shrink: 0;
                     }
 
                     input[type="checkbox"]:checked {
@@ -954,11 +957,11 @@ h5 {
                     }
 
                     .article {
-                        font-size: clamp(1rem, 0.8rem + 0.8889vw, 1.4rem);
+                        font-size: clamp(1rem, 0.75rem + 1.1111vw, 1.5rem);
                     }
 
                     .price {
-                        font-size: clamp(0.8rem, 0.6rem + 0.8889vw, 1.2rem);
+                        font-size: clamp(0.8rem, 0.6857rem + 0.4156vw, 1.2rem);
                         color: var(--white-85);
                     }
 
@@ -1035,7 +1038,7 @@ footer {
                 }
 
                 h6 {
-                    font-size: clamp(1.1rem, 0.85rem + 1.1111vw, 1.6rem);
+                    font-size: clamp(1.2rem, 1.0857rem + 0.4156vw, 1.6rem);
                     font-weight: bold;
                 }
             }
@@ -1067,7 +1070,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: clamp(0.6rem, 0.5rem + 0.4444vw, 0.8rem);
+        font-size: clamp(0.5rem, 0.4143rem + 0.3117vw, 0.8rem);
         border-top: 1px solid var(--red);
         padding: 2rem 0;
 
@@ -1087,7 +1090,7 @@ footer {
 
             span {
                 font-family: "Vogue";
-                font-size: clamp(0.8rem, 0.6rem + 0.8889vw, 1.2rem);
+                font-size: clamp(0.8rem, 0.6857rem + 0.4156vw, 1.2rem);
             }
         }
     }
@@ -1096,11 +1099,6 @@ footer {
 @media screen and (max-width: 1450px) {
     :root {
         --page-margin: clamp(1.5rem, 6vw, 4rem);
-    }
-
-    h4 {
-        font-size: clamp(1.3rem, 0.4196rem + 1.4128vw, 1.7rem);
-        font-weight: bold;
     }
 
     .hero {
@@ -1126,7 +1124,7 @@ footer {
             }
 
             p {
-                font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.35rem);
+                font-size: clamp(1.1rem, 0.9911rem + 0.396vw, 1.35rem);
             }
         }
     }
@@ -1138,7 +1136,7 @@ footer {
                 gap: 1.5rem;
 
                 p {
-                    font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.35rem);
+                    font-size: clamp(1.1rem, 0.9911rem + 0.396vw, 1.35rem);
                 }
 
                 .text {
@@ -1156,7 +1154,7 @@ footer {
                 .line {
                     .album-info {
                         p {
-                            font-size: clamp(1.1rem, 0.9rem + 0.6vw, 1.35rem);
+                            font-size: clamp(1.1rem, 0.9911rem + 0.396vw, 1.35rem);
                         }
                     }
 
@@ -1171,6 +1169,72 @@ footer {
 
                 .radius-left {
                     border-radius: 15rem 0 0 15rem;
+                }
+            }
+        }
+    }
+
+    .tour {
+        .map-cta {
+            font-size: clamp(1.1rem, 0.9911rem + 0.396vw, 1.35rem);
+        }
+    }
+
+    .contact {
+        .contact-content {
+            .form-text {
+                gap: 6rem;
+            }
+
+            .phrases {
+                .phrase {
+                    p {
+                        font-size: clamp(1.1rem, 0.9911rem + 0.396vw, 1.35rem);
+                    }
+                }
+            }
+        }
+
+        .shop {
+            .shop-content {
+                .items {
+                    .item {
+                        .article {
+                            font-size: clamp(1.1rem, 0.9911rem + 0.396vw, 1.35rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-content {
+            gap: 2rem;
+            margin-top: -6rem;
+
+            .logo {
+                .name-logo {
+                    font-size: clamp(2.5rem, 2.3571rem + 0.5195vw, 3rem);
+                }
+            }
+
+            .footer-nav {
+                .title {
+                    .line-vertical {
+                        height: 32px;
+                    }
+                }
+
+                .main-nav {
+
+                    li a {
+                        font-size: clamp(1.1rem, 0.9911rem + 0.396vw, 1.35rem);
+
+                        img {
+                            width: 22px;
+                        }
+                    }
                 }
             }
         }
@@ -1203,10 +1267,6 @@ footer {
             h1 {
                 font-size: clamp(1.375rem, -0.1375rem + 6.7222vw, 3.7rem);
             }
-
-            p {
-                font-size: clamp(1.20rem, 1.0265rem + 0.3587vw, 1.25rem);
-            }
         }
     }
 
@@ -1218,7 +1278,7 @@ footer {
                 font-size: clamp(1.1rem, 0.775rem + 1.4444vw, 1.4rem);
 
                 .icon {
-                    width: clamp(1.25rem, 0.625rem + 2.7778vw, 2.2rem);
+                    width: 35px;
                 }
             }
         }
@@ -1233,12 +1293,7 @@ footer {
                 .text {
                     max-width: 57%;
 
-                    p {
-                        font-size: clamp(1.20rem, 1.0265rem + 0.3587vw, 1.25rem);
-                    }
-
                     .quote {
-                        font-size: clamp(1.20rem, 1.0265rem + 0.3587vw, 1.25rem);
                         padding: clamp(1rem, 2.5vw, 1.7rem) clamp(2rem, 5vw, 3rem);
                         border-radius: 0 10rem 10rem 0;
                     }
@@ -1254,31 +1309,216 @@ footer {
             .album-text {
                 .line.radius-right {
                     flex-direction: column;
-                    align-items: center;
-                    border-radius: 0 8rem 8rem 0;
+                    align-items: flex-start;
+                    border-radius: 0 22rem 22rem 0;
                 }
 
                 .line.radius-left {
                     flex-direction: column-reverse;
-                    align-items: center;
+                    align-items: flex-end;
                     margin-left: auto;
-                    border-radius: 8rem 0 0 8rem;
+                    border-radius: 22rem 0 0 22rem;
                 }
 
                 .line {
-                    max-width: 750px;
+                    max-width: 80%;
 
                     img {
-                        margin: 1rem;
-                        max-width: 280px;
+                        margin: 1rem 2rem;
+                        max-width: 320px;
                     }
 
                     .album-info {
+                        max-width: 85%;
+                    }
+                }
+            }
+        }
+    }
 
-                        max-width: 600px;
+    .discography {
+        .discography-content {
+            .listen-media-container {
+                .listen-media {
+                    gap: 1.3rem;
+                    padding: 2rem 1rem;
+
+                    a {
+                        .icon {
+                            width: 35px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .tour {
+        .tour-background {
+            .tour-content {
+                gap: 2.5rem;
+
+                h3 {
+                    margin-top: 1.5rem;
+                    margin-bottom: 2rem;
+                    padding-left: 1rem;
+                }
+
+                .concert {
+                    padding-left: 1rem;
+                    gap: 1.5rem;
+
+                    .date {
+                        .month {
+                            font-size: clamp(0.8rem, 0.6308rem + 0.6154vw, 1.1rem);
+                        }
+
+                        .day {
+                            font-size: clamp(2rem, 1.7179rem + 1.0256vw, 2.5rem);
+                        }
+
+                        .year {
+                            font-size: clamp(0.6rem, 0.4872rem + 0.4103vw, 0.8rem);
+                        }
+                    }
+
+                    .place {
+                        max-width: 30%;
+                        gap: .25rem;
+
+                        .city {
+                            font-size: clamp(1.2rem, 1.0872rem + 0.4103vw, 1.4rem);
+                        }
+
+                        .event {
+                            font-size: clamp(0.9rem, 0.7872rem + 0.4103vw, 1.1rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        h4 {
+            margin-top: 3rem;
+        }
+
+        h5 {
+            margin-top: 0.7rem;
+            margin-bottom: 3rem;
+        }
+
+        .map-container {
+            width: 92%;
+            max-width: 1000px;
+
+            .marker-interaction {
+                .marker {
+                    width: clamp(0.9rem, 0.8rem + 0.4vw, 1.1rem);
+                }
+
+                .popup {
+                    font-size: clamp(0.65rem, 0.5rem + 0.6vw, 0.95rem);
+                    padding: 0.35rem 0.7rem;
+                }
+            }
+
+            .sao-paulo {
+                top: 75%;
+                left: 35.3%;
+            }
+
+            .santiago {
+                top: 81.5%;
+                left: 29.5%;
+            }
+
+            .medellin {
+                top: 63%;
+                left: 28.3%;
+            }
+
+            .london {
+                top: 39.8%;
+                left: 46.2%;
+            }
+
+            .paris {
+                top: 42.3%;
+                left: 46.8%;
+            }
+        }
+
+        .map-cta {
+            margin-top: 3rem;
+        }
+    }
+    .contact {
+
+        .contact-content {
+            .form-text {
+                gap: 5rem;   
+
+                .contact-form {
+                    margin-top: 3rem;
+
+                    form {
+                        gap: 1.7rem;
+
+                        input[type="text"],
+                        input[type="email"],
+                        select,
+                        textarea {
+                            padding: 10px;
+                        }
+
+                        textarea {
+                            height: 130px;
+                        }
+
+                        .purpose {
+                            gap: 0.4rem;
+                        }
+
+                        .form-footer {
+                            .privacy {
+                                gap: 0.8rem;
+
+                                input[type="checkbox"] {
+                                    width: 18px;
+                                    height: 18px;
+                                }
+
+                                .terms {
+                                    gap: 0.4rem;
+
+                                    label {
+                                        font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1rem);
+                                    }
+
+                                    p {
+                                        font-size: .6rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .phrases {
+                    flex: .8;
+                    gap: 1.8rem;
+
+                    .phrase {
+                        gap: .8rem;
+
+                        img {
+                            width: 32px;
+                            height: 32px;
+                        }
 
                         p {
-                            font-size: clamp(1.20rem, 1.0265rem + 0.3587vw, 1.25rem);
+                            font-size: clamp(1.1rem, 0.9872rem + 0.4103vw, 1.3rem);
                         }
                     }
                 }
@@ -1332,7 +1572,6 @@ footer {
                     max-width: 100%;
 
                     .quote {
-                        font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.22rem);
                         padding: clamp(0.9rem, 2vw, 1.3rem) clamp(1.6rem, 4vw, 2.5rem);
                         border-radius: 0 7rem 7rem 0;
                     }
@@ -1346,6 +1585,7 @@ footer {
             .photo-text.reverse {
                 flex-direction: column-reverse;
             }
+
             /* ------------------------ ALBUM TEXT ------------------------ */
             .album-text {
                 .line {
@@ -1358,33 +1598,9 @@ footer {
 
                     .album-info {
                         max-width: 500px;
-
-                        p {
-                            font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.22rem);
-                        }
-
-                        h4 {
-                            font-size: clamp(1.2rem, 1rem + 0.8vw, 1.35rem);
-                        }
                     }
                 }
             }
         }
     }
 }
-
-/* 
-@media (max-width: 992px) {
-
-    .hero header {
-        margin: 0 clamp(1.5rem, 5vw, 2rem);
-    }
-
-    .menu-off {
-        display: none;
-    }
-
-    .burger {
-        display: flex;
-    }
-} */
