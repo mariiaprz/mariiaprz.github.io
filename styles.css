@@ -2008,7 +2008,8 @@ footer {
 
                 .track {
                     gap: 1rem;
-                    span{
+
+                    span {
                         font-size: 1.2rem;
                     }
                 }
@@ -2194,11 +2195,11 @@ footer {
 
                     .item {
                         img {
-                            max-width: 200px;
+                            max-width: 220px;
                         }
 
                         .img-sm {
-                            width: 35%;
+                            width: 50%;
                         }
 
                         .article {
