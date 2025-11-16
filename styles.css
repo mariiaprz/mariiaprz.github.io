@@ -1287,6 +1287,93 @@ footer {
     }
 }
 
+@media screen and (max-width: 992px) {
+    :root {
+        --page-margin: clamp(1rem, 5vw, 2.5rem);
+    }
+
+    .menu-off {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .hero {
+        header {
+            .name-logo {
+                font-size: clamp(2rem, 0.4459rem + 6.2162vw, 4.3rem);
+            }
+        }
+    }
+
+    .stats {
+        .stats-content {
+            gap: clamp(1.2rem, -0.3rem + 7vw, 3rem);
+
+            .stat {
+                font-size: clamp(1rem, 0.75rem + 1.3vw, 1.3rem);
+
+                .icon {
+                    width: clamp(1.1rem, 0.6rem + 2.5vw, 2rem);
+                }
+            }
+        }
+    }
+
+    .biography {
+        .biography-content {
+            .photo-text {
+                flex-direction: column;
+                gap: 0.8rem;
+
+                .text {
+                    max-width: 100%;
+
+                    .quote {
+                        font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.22rem);
+                        padding: clamp(0.9rem, 2vw, 1.3rem) clamp(1.6rem, 4vw, 2.5rem);
+                        border-radius: 0 7rem 7rem 0;
+                    }
+                }
+
+                .jud {
+                    max-width: 55%;
+                }
+            }
+
+            .photo-text.reverse {
+                flex-direction: column-reverse;
+            }
+            /* ------------------------ ALBUM TEXT ------------------------ */
+            .album-text {
+                .line {
+                    max-width: 550px;
+
+                    img {
+                        margin: 1rem;
+                        max-width: 240px;
+                    }
+
+                    .album-info {
+                        max-width: 500px;
+
+                        p {
+                            font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.22rem);
+                        }
+
+                        h4 {
+                            font-size: clamp(1.2rem, 1rem + 0.8vw, 1.35rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 
 @media (max-width: 992px) {
 
     .hero header {
@@ -1300,4 +1387,4 @@ footer {
     .burger {
         display: flex;
     }
-}
+} */
