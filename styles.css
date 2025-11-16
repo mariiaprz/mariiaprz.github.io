@@ -1973,8 +1973,6 @@ footer {
                     }
 
                     .social-media {
-                        margin-top: 1rem;
-
                         img {
                             width: 26px;
                         }
@@ -2249,7 +2247,7 @@ footer {
             align-items: center;
             text-align: center;
             gap: 2rem;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
 
             .footer-nav {
                 display: none;
