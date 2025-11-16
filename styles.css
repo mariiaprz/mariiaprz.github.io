@@ -2002,23 +2002,24 @@ footer {
 
     .discography {
         .discography-content {
-            .listen-media-container {
-                top: 490px;
+            .tracks {
+                padding-left: 1rem;
+                gap: 1rem;
 
-                .listen-media {
+                .track {
                     gap: 1rem;
-                    padding: 1rem .6rem;
-
-                    a {
-                        .icon {
-                            width: 25px;
-                        }
+                    span{
+                        font-size: 1.2rem;
                     }
-
                 }
+            }
+
+            .cont-off {
+                display: none;
             }
         }
     }
+
 
     .tour {
         .tour-background {
