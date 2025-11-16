@@ -1082,7 +1082,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         font-size: clamp(0.5rem, 0.4143rem + 0.3117vw, 0.8rem);
-        border-top: 1px solid var(--red);
+        border-top: 1px solid var(--red-66);
         padding: 2rem 0;
 
         p:first-child {
@@ -2203,6 +2203,7 @@ footer {
 
                         .article {
                             font-size: clamp(0.85rem, 0.75rem + 0.5vw, 1rem);
+                            text-align: center;
                         }
 
                         .price {
