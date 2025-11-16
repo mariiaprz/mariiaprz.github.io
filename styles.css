@@ -1744,6 +1744,31 @@ footer {
                     padding: 0.3rem 0.6rem;
                 }
             }
+
+            .sao-paulo {
+                top: 73%;
+                left: 35%;
+            }
+
+            .santiago {
+                top: 79.6%;
+                left: 29.7%;
+            }
+
+            .medellin {
+                top: 61.8%;
+                left: 28.7;
+            }
+
+            .london {
+                top: 37.9%;
+                left: 46%;
+            }
+
+            .paris {
+                top: 40.3%;
+                left: 46.5%;
+            }
         }
 
         .map-cta {
